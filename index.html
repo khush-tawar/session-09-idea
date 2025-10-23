@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Idea Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Startup Idea Generator</h1>
+            <p class="subtitle">Generate 9 startup ideas and evaluate them on desirability vs feasibility</p>
+        </header>
+        
+        <div class="controls">
+            <button id="generateBtn" class="generate-btn">Generate Ideas</button>
+        </div>
+        
+        <div id="matrixContainer" class="matrix-container hidden">
+            <div class="matrix-header">
+                <h2>Desirability vs Feasibility Matrix</h2>
+                <p class="matrix-description">Ideas are positioned based on their desirability (Y-axis) and feasibility (X-axis)</p>
+            </div>
+            
+            <div class="matrix-wrapper">
+                <div class="y-axis-label">
+                    <span class="axis-title">Desirability</span>
+                    <div class="axis-markers">
+                        <span>High</span>
+                        <span>Medium</span>
+                        <span>Low</span>
+                    </div>
+                </div>
+                
+                <div class="matrix-content">
+                    <div class="matrix" id="matrix">
+                        <div class="quadrant" data-quadrant="high-high">
+                            <span class="quadrant-label">High Desirability<br>High Feasibility</span>
+                        </div>
+                        <div class="quadrant" data-quadrant="high-med">
+                            <span class="quadrant-label">High Desirability<br>Med Feasibility</span>
+                        </div>
+                        <div class="quadrant" data-quadrant="high-low">
+                            <span class="quadrant-label">High Desirability<br>Low Feasibility</span>
+                        </div>
+                        <div class="quadrant" data-quadrant="med-high">
+                            <span class="quadrant-label">Med Desirability<br>High Feasibility</span>
+                        </div>
+                        <div class="quadrant" data-quadrant="med-med">
+                            <span class="quadrant-label">Med Desirability<br>Med Feasibility</span>
+                        </div>
+                        <div class="quadrant" data-quadrant="med-low">
+                            <span class="quadrant-label">Med Desirability<br>Low Feasibility</span>
+                        </div>
+                        <div class="quadrant" data-quadrant="low-high">
+                            <span class="quadrant-label">Low Desirability<br>High Feasibility</span>
+                        </div>
+                        <div class="quadrant" data-quadrant="low-med">
+                            <span class="quadrant-label">Low Desirability<br>Med Feasibility</span>
+                        </div>
+                        <div class="quadrant" data-quadrant="low-low">
+                            <span class="quadrant-label">Low Desirability<br>Low Feasibility</span>
+                        </div>
+                    </div>
+                    
+                    <div class="x-axis-label">
+                        <span class="axis-title">Feasibility</span>
+                        <div class="axis-markers">
+                            <span>Low</span>
+                            <span>Medium</span>
+                            <span>High</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="ideasList" class="ideas-list"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
